@@ -47,6 +47,10 @@ extension EmojiArtView
             if selectedSubview != nil {
                 recognizer.view?.center = recognizer.view!.center.offset(by: recognizer.translation(in: self))
                 recognizer.setTranslation(CGPoint.zero, in: self)
+                // not needed anymore because of KVO
+                // if recognizer.state == .ended {
+                //     delegate?.emojiArtViewDidChange(self)
+                // }
             }
         default:
             break
@@ -88,6 +92,10 @@ extension EmojiArtView
                 label.attributedText = label.attributedText?.withFontScaled(by: recognizer.scale)
                 label.stretchToFit()
                 recognizer.scale = 1.0
+                // not needed anymore because of KVO
+                // if recognizer.state == .ended {
+                //     delegate?.emojiArtViewDidChange(self)
+                // }
             }
         default:
             break
@@ -96,9 +104,14 @@ extension EmojiArtView
     
     @objc func selectAndSendSubviewToBack(by recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
-            if let view = recognizer.view, let index = subviews.firstIndex(of: view) {
+            if let view = recognizer.view, let index = subviews.index(of: view) {
                 selectedSubview = view
                 exchangeSubview(at: 0, withSubviewAt: index)
+                // would be nice to observe this change via KVO too
+                // could "fake it" by setting center to its existing value here?
+                // a little too much hackery :)
+                delegate?.emojiArtViewDidChange(self)
+                NotificationCenter.default.post(name: .EmojiArtViewDidChange, object: self)
             }
         }
     }
