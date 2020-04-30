@@ -112,7 +112,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         // when we are about to appear
         // start monitoring our document's documentState
         documentObserver = NotificationCenter.default.addObserver(
-            forName: Notification.Name.UIDocumentStateChanged,
+          forName: UIDocument.stateChangedNotification,
             object: document,
             queue: OperationQueue.main,
             using: { notification in

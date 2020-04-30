@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6B5390245ABC830033D12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B538F245ABC830033D12C /* Main.storyboard */; };
 		4A9D4D9A24589E4E009AE19C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D4D9924589E4E009AE19C /* AppDelegate.swift */; };
 		4A9D4D9C24589E4E009AE19C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D4D9B24589E4E009AE19C /* DocumentBrowserViewController.swift */; };
 		4A9D4DA024589E4E009AE19C /* EmojiArtDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D4D9F24589E4E009AE19C /* EmojiArtDocument.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A6B538F245ABC830033D12C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4A9D4D9624589E4E009AE19C /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9D4D9924589E4E009AE19C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9D4D9B24589E4E009AE19C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				4A9D4DAF24589E6E009AE19C /* Supporting Files */,
 				4A9D4DB02458A0F4009AE19C /* EmojiArt.swift */,
 				4A9D4DBE2458A149009AE19C /* Assets.xcassets */,
+				4A6B538F245ABC830033D12C /* Main.storyboard */,
 				4A9D4DB32458A0F4009AE19C /* EmojiArtView.swift */,
 				4A9D4DE42458AC25009AE19C /* EmojiArt */,
 				4A9D4DB22458A0F4009AE19C /* EmojiArtView+Gestures.swift */,
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6B5390245ABC830033D12C /* Main.storyboard in Resources */,
 				4A9D4DA824589E50009AE19C /* LaunchScreen.storyboard in Resources */,
 				4A9D4DBF2458A149009AE19C /* Assets.xcassets in Resources */,
 			);
