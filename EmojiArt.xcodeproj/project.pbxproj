@@ -103,17 +103,9 @@
 		4A9D4DE42458AC25009AE19C /* EmojiArt */ = {
 			isa = PBXGroup;
 			children = (
-				4A9D4DE52458AC25009AE19C /* Supporting Files */,
 			);
 			name = EmojiArt;
 			path = "../../../../Downloads/CS193P-Fall-2017-DEMO-master-3/EmojiArt L14/EmojiArt L14 End Lecture/EmojiArt";
-			sourceTree = "<group>";
-		};
-		4A9D4DE52458AC25009AE19C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
