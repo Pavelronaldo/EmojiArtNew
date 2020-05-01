@@ -46,7 +46,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
           picker.presentingViewController?.dismiss(animated: true)
 
       }
-      
+//
 
 // MARK: - Navigation
     
