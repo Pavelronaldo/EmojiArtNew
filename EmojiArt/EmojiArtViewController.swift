@@ -33,8 +33,8 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         picker.presentingViewController?.dismiss(animated: true)
     }
     
-    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = ((info[UIImagePickerController.InfoKey.editedImage] ?? info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)]) as? UIImage) {
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    if let image = ((info[UIImagePickerControllerEditedImage] ?? info[UIImagePickerControllerOriginalImage]) as? UIImage)?.scaled(by: 0.25) {
      let url = image.storeLocallyAsJPEG(named: String(Date.timeIntervalSinceReferenceDate))
             if let imageData = image.jpegData(compressionQuality: 1.0) {
                   emojiArtBackgroundImage = .local(imageData, image)
@@ -46,7 +46,6 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
           picker.presentingViewController?.dismiss(animated: true)
 
       }
-//
 
 // MARK: - Navigation
     
